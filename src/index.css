@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +93,47 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+/* Custom styles for VMS */
+.vms-container {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.vms-card {
+  @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+}
+
+.vms-input {
+  @apply w-full rounded-md border border-gray-300 px-4 py-2 focus:border-ndma-lightBlue focus:outline-none focus:ring-1 focus:ring-ndma-lightBlue;
+}
+
+.vms-btn-primary {
+  @apply bg-ndma-blue text-white font-medium py-2 px-6 rounded-md transition-colors hover:bg-opacity-90;
+}
+
+.vms-btn-secondary {
+  @apply bg-ndma-orange text-white font-medium py-2 px-6 rounded-md transition-colors hover:bg-opacity-90;
+}
+
+.vms-btn-outline {
+  @apply border-2 border-ndma-blue text-ndma-blue font-medium py-2 px-6 rounded-md transition-colors hover:bg-ndma-blue hover:text-white;
 }
